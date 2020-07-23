@@ -12,7 +12,7 @@ export interface ItemsStateModel {
 @State<ItemsStateModel>({
   name: 'items',
   defaults: {
-    items: ['a', 'b']
+    items: ['a', 'b', 'c', 'd', 'e', 'f']
   }
 })
 @Injectable()

@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { NgxsModule } from '@ngxs/store';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 
+import { ModalModule } from 'ngx-bootstrap/modal';
+
 import { ItemsState } from './store/items.state';
 
 
@@ -17,8 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     NgxsModule.forRoot([ItemsState]),
     NgxsReduxDevtoolsPluginModule.forRoot(),
-    BrowserAnimationsModule
-
+    BrowserAnimationsModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
