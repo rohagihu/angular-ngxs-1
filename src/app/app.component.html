@@ -1,36 +1,41 @@
-<ul class="list-group">
-  <li
-    *ngFor="let item of items; let i = index"
-    class="list-group-item"
-  >
-    <span
-      (click)="openModal(template, i)"
-      class="mr-2"
-      style="cursor: pointer;"
+<div class="container">
+
+  <h1>List</h1>
+
+  <ul class="list-group mt-3">
+    <li
+      *ngFor="let item of items; let i = index"
+      class="list-group-item"
     >
-      ❌
-    </span>
-    {{ item }}
-  </li>
-</ul>
+      <span
+        (click)="openModal(template, i)"
+        class="mr-2"
+        style="cursor: pointer;"
+      >
+        ❌
+      </span>
+      {{ item }}
+    </li>
+  </ul>
 
 
-<div class="input-group mb-3 w-25">
-  <input
-    type="text"
-    #itemInput
-    value="test"
-    class="form-control"
-    placeholder="New item"
-  >
-  <div class="input-group-append">
-    <button
-      class="btn btn-primary"
-      type="button"
-      (click)="addItem();"
+  <div class="input-group mt-3 w-25">
+    <input
+      type="text"
+      #itemInput
+      value="test"
+      class="form-control"
+      placeholder="New item"
     >
-      Add
-    </button>
+    <div class="input-group-append">
+      <button
+        class="btn btn-primary"
+        type="button"
+        (click)="addItem()"
+      >
+        Add
+      </button>
+    </div>
   </div>
 </div>
 

@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
   modalOpenedIndex: number;
 
   items$: Observable<ItemsStateModel[]>;
-  items: ItemsStateModel[] = []
+  items: ItemsStateModel[] = [];
 
   constructor(
     private store: Store,
@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
   }
 
   addItem(): void {
-    let name: string = this.itemInput.nativeElement.value
+    const name: string = this.itemInput.nativeElement.value;
     this.store.dispatch(new AddItem(name));
     this.itemInput.nativeElement.value = '';
   }
